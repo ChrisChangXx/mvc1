@@ -1,4 +1,4 @@
-package com.chris.app;
+package com.chris.app.initializer;
 
 import com.chris.app.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -16,8 +16,8 @@ import javax.servlet.ServletRegistration;
  * @author zhangh
  * @date 2021/05/17
  */
-public class MyWebApplicationInitializer implements WebApplicationInitializer {
-    @Override
+public class MyWebApplicationInitializer /*implements WebApplicationInitializer*/ {
+    /*@Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(AppConfig.class);
@@ -27,5 +27,5 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic registration = servletContext.addServlet("dispatcherServlet", dispatcherServlet);
         registration.addMapping("/");
         registration.setLoadOnStartup(1);
-    }
+    }*/
 }
